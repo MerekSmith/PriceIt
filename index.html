@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>PriceIt!</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container nav-container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				 aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- PriceIt! Logo -->
+				<a class="navbar-brand" href="index.html">
+					<img src="assets/images/PriceItLogo.png" alt="PriceIt!" id="PriceItLogo">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<!-- link to the home page -->
+					<li id="homeButton">
+						<a href="index.html">Home</a>
+					</li>
+					<!-- link to the login page -->
+					<li id="loginButton">
+						<a href="login.html">Login</a>
+					</li>
+					<!-- link to the Register page -->
+					<li id="registerButton">
+						<a href="register.html">Register</a>
+						<!-- link to the Account page -->
+						<li id="accountButton">
+							<a href="account.html">My Account</a>
+						</li>
+						<li id="signoutButton">
+							<a href="">Sign Out</a>
+						</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-3">PriceIt!</h1>
+			<p class="lead">Welcome to PriceIt! Sign up today to start price matching on millions of products!</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<p class="paragraphs">Tired of overpaying for items that you need? Enter what you're looking for below and start saving your hard earned money!</p>
+	</div>
+
+	<div class="row">
+
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<form method="post">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Enter a product here!" id="search-input">
+					<!-- Search input/button -->
+					<span class="input-group-btn">
+						<input class="btn btn-default" type="submit" value="PriceIt!" id="btn-search">PriceIt!</input>
+					</span>
+				</div>
+			</form>
+			</div>
+			<!-- /input-group -->
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-4" id="amazon-container">
+			<p class="company-name">AMAZON</p>
+		</div>
+		<div class="col-md-4" id="walmart-container">
+			<P class="company-name">WALMART</P>
+		</div>
+		<div class="col-md-4" id="ebay-container">
+			<P class="company-name">EBAY</P>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4" id="amazon-ad-container"></div>
+		<div class="col-md-4" id="walmart-ad-container"></div>
+		<div class="col-md-4" id="ebay-ad-container"></div>
+	</div>
+	<div class="row">
+		<div class "col-md-4" id="google-ad-container"></div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class "col-md-4" id="discount-container"></div>
+		</div>
+	</div>
+	</div>
+
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+	<script src="assets/js/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="bower_components/crypto-js/crypto-js.js"></script>
+	<script src="bower_components/crypto-js/enc-base64.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/index.js"></script>
+	<script src="assets/js/walmartapi.js"></script>
+	<script src="assets/js/amazonapi.js"></script>
+	<script src="assets/js/ebayapi.js"></script>
+	<script src="assets/js/discountapi.js"></script>
+	<script src="assets/js/register.js"></script>
+
+
+
+	<footer>
+		<!--Copyright-->
+		<div class="footer-copyright py-3 text-center">
+			<div class="container-fluid">
+				© 2018 Copyright: PriceIt!
+
+			</div>
+		</div>
+		<!--/.Copyright-->
+
+	</footer>
+
+
+	</footer>
+</body>
+
+</html>
