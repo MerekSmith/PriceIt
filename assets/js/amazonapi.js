@@ -194,7 +194,7 @@ var amazon = {
 					} else {
 						amazon.currentItem.description = 'no description available';
 					}
-
+					console.log('amazon',currentItem);
 					displayItems(amazon.currentItem, 'amazon');
 				}
 			} else {

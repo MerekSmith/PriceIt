@@ -3,6 +3,7 @@ $('#registerButton').hide();
 $('#accountButton').hide();
 $('#signoutButton').hide();
 firebase.auth().onAuthStateChanged(function (user) {
+	user = true;
 	console.log('auth state has changed on index', user);
 	if (user) {
 		$('#signoutButton').on('click', function () {
@@ -29,7 +30,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 				removeContainerChildren();
 				var searchString = $('#search-input').val();
 				walmart.getItems(searchString, displayItems);
-				amazon.getItems(searchString, displayItems);
+				// amazon.getItems(searchString, displayItems);
 				ebay.getItems(searchString, displayItems);
 				discount.getCoupons(searchString);
 				$('#search-input').val('');
@@ -40,6 +41,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 		});
 
 		function displayItems(data, containerName) {
+			console.log('items', data);
 			var div = $('<div>').addClass('row ' + containerName + '-div');
 			div.append('<h1>' + '$' + data.price + '</h1>');
 			div.append('<p>' + data.name + '</p>');
